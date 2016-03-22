@@ -60,7 +60,7 @@ ________________________________________________________________________________
 
 =====================================================================================================================================
 
-SQL Select
+Select
 _____________________________________________________________________________________________________________________________________
 - Câu lệnh SELECT được dùng để lựa chọn dữ liệu từ CSDL.
 - Kết quả được lưu trữ trong một bảng kết quả, gọi là tập kết quả.
@@ -73,7 +73,7 @@ và
 
 =====================================================================================================================================
 
-SQL Distinct
+Distinct
 _____________________________________________________________________________________________________________________________________
 - Câu lệnh SELECT DISTINCT sử dụng để trả về các giá trị khác biệt (khác nhau).
 - Trong một bảng, một cột có thể chứa nhiều giá trị trùng lặp; và đôi khi bạn chỉ muốn liệt kê các giá trị khác nhau (khác biệt).
@@ -84,7 +84,7 @@ CÚ PHÁP
 
 =====================================================================================================================================
 
-SQL Where
+Where
 _____________________________________________________________________________________________________________________________________
 - Mệnh đề Where được dùng để lọc các bản ghi.
 - Mệnh đề Where trích xuất chỉ các bản ghi đáp ứng thỏa mãn một tiêu chuẩn quy định.
@@ -96,7 +96,7 @@ CÚ PHÁP
 
 =====================================================================================================================================
 
-SQL And & Or
+And & Or
 _____________________________________________________________________________________________________________________________________
 - Các toán tử AND & OR được dùng để lọc các bản ghi dựa trên nhiều hơn một điều kiện.
 - Toán tử AND sẽ hiển thị một bản ghi nếu cả hai điều kiện đầu tiên và điều kiện thứ hai là đúng.
@@ -113,7 +113,7 @@ và
 
 =====================================================================================================================================
 
-SQL Order By
+Order By
 _____________________________________________________________________________________________________________________________________
 - Từ khóa ORDER BY được dùng để sắp xếp các kết quả theo quy định thiết lập bởi một hoặc nhiều cột.
 - Các từ khóa ORDER BY mặc định sắp xếp các bản ghi theo thứ tự tăng dần. Để sắp xếp các bản ghi theo thứ tự giảm dần, sử dụng từ
@@ -126,9 +126,9 @@ CÚ PHÁP
 
 =====================================================================================================================================
 
-SQL Insert Into
+Insert Into
 _____________________________________________________________________________________________________________________________________
-- Câu lệnh INSERT INTO được dùng để chèn các bản ghi mới vào một bảng.
+- Câu lệnh INSERT INTO được dùng để chèn các bản ghi mới vào trong một bảng.
 - Có thể viết INSERT INTO theo hai dạng.
 - Dạng thứ nhất không xác định các cột dữ liệu sẽ đưa vào, chỉ có các giá trị.
 - Dạng thứ hai chỉ rõ cả tên cột và các giá trị được chèn vào.
@@ -142,6 +142,81 @@ hoặc
 
 =====================================================================================================================================
 
-SQL Update
+Update
 _____________________________________________________________________________________________________________________________________
-- 
+- Câu lệnh UPDATE được dùng để cập nhật các bản ghi hiện có trong một bảng.
+- Mệnh đề WHERE xác định các bản ghi cần được cập nhật. Nếu bỏ qua mệnh đề WHERE, tất cả các bản ghi sẽ được cập nhật.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    UPDATE table_name
+    SET column1=value1, column2=value2, ...
+    WHERE some_column=some_value;
+
+=====================================================================================================================================
+
+Delete
+_____________________________________________________________________________________________________________________________________
+- Câu lệnh DELETE được dùng để xóa các hàng trong một bảng.
+- Mệnh đề WHERE xác định các bản ghi cần được xóa. Nếu bỏ qua mệnh đề WHERE, tất cả các bản ghi sẽ bị xóa.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    DELETE FROM table_name
+    WHERE some_column=some_value;
+
+=====================================================================================================================================
+
+Select Top
+_____________________________________________________________________________________________________________________________________
+- Mệnh đề SELECT TOP được dùng để xác định số lượng bản ghi trả về.
+- Mệnh để SELECT TOP có thể rất hữu ích trên các bảng lớn với hàng ngàn bản ghi. Trả về số lượng lớn các bản ghi có thể ảnh hưởng đến
+  hiệu suất.
+- Không phải phần lớn các hệ thống CSDL đều hỗ trợ mệnh đề SELECT TOP.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+- Trong SQL Sever / MS Access:
+    SELECT TOP number column_name, column_name
+    FROM table_name;
+hoặc
+    SELECT TOP number PERSENT column_name, column_name
+    FROM table_name;
+- Trong MySQL:
+    SELECT column_name, column_name
+    FROM table_name
+    LIMIT number;
+- Trong Oracle:
+    SELECT column_name, column_name
+    FROM table_name
+    WHERE ROWNUM <= number;
+
+=====================================================================================================================================
+
+Like
+_____________________________________________________________________________________________________________________________________
+- Toán tử LIKE được dùng để tìm kiếm một mô hình quy định trong một cột.
+- Các dấu "%" được sử dụng trong pattern để xác định các kí hiệu (chữ cái còn thiếu).
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    SELECT column_name, column_name
+    FROM table_name
+    WHERE column_name LIKE pattern;
+hoặc
+    SELECT column_name, column_name
+    FROM table_name
+    WHERE column_name NOT LIKE pattern;
+
+=====================================================================================================================================
+
+Wildcards
+_____________________________________________________________________________________________________________________________________
+- Một ký tự đại diện có thể được sử dụng để thay thế cho bất kỳ các ký tự khác trong một chuỗi.
+- Ký tự đại diện được sử dụng với các toán tử LIKE.
+- Các ký tự đại diện SQL được dùng để tìm kiếm dữ liệu trong một bảng.
+- Các ký tự đại diện là:
+    %               Thay thế cho không hoặc nhiều ký tự.
+    _               Thay thế cho một ký tự đơn.
+    [charlist]      Thiết đặt phạm vi các ký tự phù hợp nằm trong dấu ngoặc.
+    [^charlist]     Kết quả chỉ phù hợp khi một ký tự được xác định không nằm trong cặp dấu ngoặc.
+    [!charlist]     Kết quả chỉ phù hợp khi một ký tự được xác định không nằm trong cặp dấu ngoặc.
+
+=====================================================================================================================================
+
