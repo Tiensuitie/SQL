@@ -1,4 +1,5 @@
 KIỂU DỮ LIỆU TRONG SQL SERVER
+
     Kiểu Chuỗi:
         char(n)             - Chuỗi ký tự có độ dài cố định. Tối đa 8,000 ký tự.
         varchar(n)          - Chuỗi ký tự có độ dài bất định. Tối đa 8,000 ký tự.
@@ -13,6 +14,7 @@ KIỂU DỮ LIỆU TRONG SQL SERVER
         varbinary           - Chuỗi nhị phân có độ dài bất định. Tối đa 8,000 byte.
         varbinary(max)      - Chuỗi nhị phân có độ dài bất định. Tối đa 2GB.
         image               - Chuỗi nhị phân có độ dài bất định. Tối đa 2GB.
+
     Kiểu Số:
         tinyint             - Cho phép tất cả các số từ 0 đến 255.
         smallint            - Cho phép tất cả các số giữa -32,768 và 32,767.
@@ -36,3 +38,4 @@ KIỂU DỮ LIỆU TRONG SQL SERVER
                               Tham số n cho biết xem các giá trị cần giữ 4 hay 8 byte để lưu trữ. float(24) sẽ giữ 4 byte, float(53)
                             sẽ giữ 8 byte. Giá trị mặc định của n là 53.
         real                - Dữ liệu số dấu chấm động từ -3.40E + 38 đến 3.40E + 38.
+
