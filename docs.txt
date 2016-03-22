@@ -351,6 +351,16 @@ Select Into
 _____________________________________________________________________________________________________________________________________
 - Câu lệnh SELECT INTO chọn dữ liệu từ một bảng và chèn nó vào một bảng mới.
 - Có thể sử dụng để sao chép thông tin từ một bảng vào một bảng khác.
+- Câu lệnh SELECT INTO cũng có thể được dùng để tạo ra một bảng trống mới sử dụng giản đồ của người khác. Chỉ cần thêm một mệnh đề
+  WHERE tạo ra các truy vấn không trả về dữ liệu. Vd: WHERE 1=0.
+- Sử dụng mệnh đề IN để sao chép bảng vào CSDL khác.
 _____________________________________________________________________________________________________________________________________
 CÚ PHÁP
-
+- Sao chép tất cả các cột:
+    SELECT *
+    INTO new_table [IN external_db]
+    FROM table_name;
+- Sao chép các cột được chỉ định:
+    SELECT column_name, column_name
+    INTO new_table [IN external_db]
+    FROM table_name;
