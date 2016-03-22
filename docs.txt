@@ -211,6 +211,7 @@ ________________________________________________________________________________
 - Một ký tự đại diện có thể được sử dụng để thay thế cho bất kỳ các ký tự khác trong một chuỗi.
 - Ký tự đại diện được sử dụng với các toán tử LIKE.
 - Các ký tự đại diện được dùng để tìm kiếm dữ liệu trong một bảng.
+_____________________________________________________________________________________________________________________________________
 - Các ký tự đại diện gồm:
     %               Thay thế cho không hoặc nhiều ký tự.
     _               Thay thế cho một ký tự đơn.
@@ -350,7 +351,7 @@ CÚ PHÁP
 Select Into
 _____________________________________________________________________________________________________________________________________
 - Câu lệnh SELECT INTO chọn dữ liệu từ một bảng và chèn nó vào một bảng mới.
-- Có thể sử dụng để sao chép thông tin từ một bảng vào một bảng khác.
+- Có thể sử dụng để sao chép thông tin từ một bảng vào một bảng mới.
 - Câu lệnh SELECT INTO cũng có thể được dùng để tạo ra một bảng trống mới sử dụng giản đồ của người khác. Chỉ cần thêm một mệnh đề
   WHERE tạo ra các truy vấn không trả về dữ liệu. Vd: WHERE 1=0.
 - Sử dụng mệnh đề IN để sao chép bảng vào CSDL khác.
@@ -364,3 +365,64 @@ CÚ PHÁP
     SELECT column_name, column_name
     INTO new_table [IN external_db]
     FROM table_name;
+
+=====================================================================================================================================
+
+Insert Into Select
+_____________________________________________________________________________________________________________________________________
+- Câu lệnh INSERT INTO SELECT chọn dữ liệu từ một bảng và chèn nó vào một bảng hiện tại.
+- Có thể sử dụng để sao chép thông tin từ một bảng vào một bảng khác.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+- Sao chép tất cả các cột:
+    INSERT INTO table_B
+    SELECT * FROM table_A;
+- Sao chép các cột được chỉ định:
+    INSERT INTO table_B (column_name, column_name)
+    SELECT column_name, column_name
+    FROM table_A;
+
+=====================================================================================================================================
+
+Create DB
+_____________________________________________________________________________________________________________________________________
+- Câu lệnh CREATE DATABASE được sử dụng để tạo ra một CSDL.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    CREATE DATABASE dbname;
+
+=====================================================================================================================================
+
+Create Table
+_____________________________________________________________________________________________________________________________________
+- Câu lệnh CREATE TABLE được sử dụng để tạo một bảng trong một CSDL.
+- Bảng được tổ chức theo các hàng và cột; và mỗi bảng phải có một cái tên.
+- Các thông số column_name chỉ định tên của các cột, data_type xác định kiểu dữ liệu của cột, size xác định độ dài tối đa của cột.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    CREATE TABLE table_name (
+    column_name_1 data_type(size),
+    column_name_2 data_type(size),
+    column_name_3 data_type(size),
+    ....
+    );
+
+=====================================================================================================================================
+
+Not Null
+_____________________________________________________________________________________________________________________________________
+- Theo mặc định, một cột trong bảng có thể lưu trữ các giá trị NULL.
+- Ràng buộc NOT NULL chỉ ra rằng một cột không thể lưu trữ giá trị NULL.
+- Ràng buộc NOT NULL buộc các cột luôn luôn chứa một giá trị. Điều này có nghĩa rằng không thể chèn một bản ghi mới, hoặc cập nhật
+  một bản ghi mà không cần thêm một giá trị cho cột này.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    CREATE TABLE table_name (
+    column_name_1 datatype(size) NOT NULL,
+    column_name_2 datatype(size) NOT NULL,
+    column_name_3 datatype(size),
+    ....
+    );
+
+=====================================================================================================================================
+
