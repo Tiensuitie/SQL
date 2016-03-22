@@ -1,15 +1,38 @@
 KIỂU DỮ LIỆU TRONG SQL SERVER
     Kiểu Chuỗi:
-        char(n)             Chuỗi ký tự có độ dài cố định. Tối đa 8,000 ký tự.
-        varchar(n)          Chuỗi ký tự có độ dài bất định. Tối đa 8,000 ký tự.
-        varchar(max)        Chuỗi ký tự có độ dài bất định. Tối đa 1,073,741,824 ký tự.
-        text                Chuỗi ký tự có độ dài bất định. Tối đa 2GB dữ liệu văn bản.
-        nchar               Chuỗi Unicode với độ dài cố định. Tối đa 4,000 ký tự.
-        nvarchar            Chuỗi Unicode với độ dài bất định. Tối đa 4,000 ký tự.
-        nvarchar(max)       Chuỗi Unicode với độ dài bất định. Tối đa 536,870,912 ký tự.
-        ntext               Chuỗi Unicode với độ dài bất định. Tối đa 2GB dữ liệu văn bản.
-        bit                 Chỉ cho phép giá trị 0, 1 hoặc NULL.
-        binary(n)           Chuỗi nhị phân có độ dài cố định. Tối đa 8,000 byte.
-        varbinary           Chuỗi nhị phân có độ dài bất định. Tối đa 8,000 byte.
-        varbinary(max)      Chuỗi nhị phân có độ dài bất định. Tối đa 2GB.
-        image               Chuỗi nhị phân có độ dài bất định. Tối đa 2GB.
+        char(n)             - Chuỗi ký tự có độ dài cố định. Tối đa 8,000 ký tự.
+        varchar(n)          - Chuỗi ký tự có độ dài bất định. Tối đa 8,000 ký tự.
+        varchar(max)        - Chuỗi ký tự có độ dài bất định. Tối đa 1,073,741,824 ký tự.
+        text                - Chuỗi ký tự có độ dài bất định. Tối đa 2GB dữ liệu văn bản.
+        nchar               - Chuỗi Unicode với độ dài cố định. Tối đa 4,000 ký tự.
+        nvarchar            - Chuỗi Unicode với độ dài bất định. Tối đa 4,000 ký tự.
+        nvarchar(max)       - Chuỗi Unicode với độ dài bất định. Tối đa 536,870,912 ký tự.
+        ntext               - Chuỗi Unicode với độ dài bất định. Tối đa 2GB dữ liệu văn bản.
+        bit                 - Cho phép chỉ giá trị 0, 1 hoặc NULL.
+        binary(n)           - Chuỗi nhị phân có độ dài cố định. Tối đa 8,000 byte.
+        varbinary           - Chuỗi nhị phân có độ dài bất định. Tối đa 8,000 byte.
+        varbinary(max)      - Chuỗi nhị phân có độ dài bất định. Tối đa 2GB.
+        image               - Chuỗi nhị phân có độ dài bất định. Tối đa 2GB.
+    Kiểu Số:
+        tinyint             - Cho phép tất cả các số từ 0 đến 255.
+        smallint            - Cho phép tất cả các số giữa -32,768 và 32,767.
+        int                 - Cho phép tất cả các số giữa -2,147,483,648 và 2,147,483,647.
+        bigint              - Cho phép tất cả các số giữa -9,223,372,036,854,775,808 và 9,223,372,036,854,775,807.
+        decimal(p,s)        - Độ lớn và độ chính xác của số.
+                              Cho phép các số từ -10^38 +1 đến 10^38 -1.
+                              Tham số p chỉ ra tổng số lượng tối đa các chữ số có thể được lưu trữ (cả bên trái và bên phải dấu thập
+                            phân). p phải là một giá trị từ 1 đến 38. Mặc định là 18.
+                              Tham số s chỉ ra số lượng tối đa các chữ số được lưu trữ bên phải dấu thập phân. p phải là một giá trị
+                            từ 0 đến p. Mặc định là 0.
+        numeric(p,s)        - Độ lớn và độ chính xác của số.
+                              Cho phép các số từ -10^38 +1 đến 10^38 -1.
+                              Tham số p chỉ ra tổng số lượng tối đa các chữ số có thể được lưu trữ (cả bên trái và bên phải dấu thập
+                            phân). p phải là một giá trị từ 1 đến 38. Mặc định là 18.
+                              Tham số s chỉ ra số lượng tối đa các chữ số được lưu trữ bên phải dấu thập phân. p phải là một giá trị
+                            từ 0 đến p. Mặc định là 0.
+        smallmoney          - Dữ liệu tiền tệ từ -214,748.3648 đến 214,748.3647.
+        money               - Dữ liệu tiền tệ từ -922,337,203,685,477.5808 đến 922,337,203,685,477.5807.
+        float(n)            - Dữ liệu số dấu chấm động từ -1.79E + 308 đến 1.79E + 308.
+                              Tham số n cho biết xem các giá trị cần giữ 4 hay 8 byte để lưu trữ. float(24) sẽ giữ 4 byte, float(53)
+                            sẽ giữ 8 byte. Giá trị mặc định của n là 53.
+        real                - Dữ liệu số dấu chấm động từ -3.40E + 38 đến 3.40E + 38.
