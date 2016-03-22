@@ -1,3 +1,4 @@
+
 KIỂU DỮ LIỆU TRONG SQL SERVER
 
     Kiểu Chuỗi:
