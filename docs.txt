@@ -259,8 +259,8 @@ CÚ PHÁP
 
 Joins
 _____________________________________________________________________________________________________________________________________
-- Từ khóa JOIN được sử dụng để kết hợp các hàng từ hai bảng miến là có sự trùng khớp giữa các cột trong hai bảng. Nếu không có giá
-  trị nào trùng khớp, bản ghi đó sẽ không được trả về.
+- Từ khóa JOIN được sử dụng để nối các hàng từ bảng bên trái (table_A), với các hàng so khớp với bảng bên phải (table_B). Nếu không
+  tìm thấy giá trị nào trùng khớp trong bảng bên phải, bản ghi trong bảng bên trái đó sẽ không được trả về.
 _____________________________________________________________________________________________________________________________________
 CÚ PHÁP
     SELECT table_A.column_1, table_A.column_2, table_B.column_2
@@ -272,4 +272,85 @@ CÚ PHÁP
 
 Inner Join
 _____________________________________________________________________________________________________________________________________
-- 
+- Từ khóa INNER JOIN được sử dụng để nối các hàng từ bảng bên trái (table_A), với các hàng so khớp với bảng bên phải (table_B). Nếu
+  không tìm thấy giá trị nào trùng khớp trong bảng bên phải, bản ghi trong bảng bên trái đó sẽ không được trả về.
+- INNER JOIN cũng giống như JOIN.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    SELECT table_A.column_1, table_A.column_2, table_B.column_2
+    FROM table_A
+    INNER JOIN table_B
+    ON table_A.column_3 = table_B.column_1
+
+=====================================================================================================================================
+
+Left Join
+_____________________________________________________________________________________________________________________________________
+- Từ khóa LEFT JOIN được sử dụng để nối các hàng từ bảng bên trái (table_A), với các hàng so khớp với bảng bên phải (table_B). Nếu
+  không tìm thấy giá trị nào trùng khớp trong bảng bên phải, giá trị NULL sẽ được trả về trong bảng bên trái.
+- Trong một số CSDL, LEFT JOIN được gọi là LEFT OUTER JOIN.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    SELECT table_A.column_1, table_A.column_2, table_B.column_2
+    FROM table_A
+    LEFT JOIN table_B
+    ON table_A.column_3 = table_B.column_1
+hoặc
+    SELECT table_A.column_1, table_A.column_2, table_B.column_2
+    FROM table_A
+    LEFT OUTER JOIN table_B
+    ON table_A.column_3 = table_B.column_1
+
+=====================================================================================================================================
+
+Right Join
+_____________________________________________________________________________________________________________________________________
+- Từ khóa RIGHT JOIN được sử dụng để nối các hàng từ bảng bên phải (table_B), với các hàng so khớp với bảng bên trái (table_A). Nếu
+  không tìm thấy giá trị nào trùng khớp trong bảng bên trái, giá trị NULL sẽ được trả về trong bảng bên phải.
+- Trong một số CSDL, RIGHT JOIN được gọi là RIGHT OUTER JOIN.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    SELECT table_A.column_1, table_A.column_2, table_B.column_2
+    FROM table_A
+    RIGHT JOIN table_B
+    ON table_A.column_3 = table_B.column_1
+hoặc
+    SELECT table_A.column_1, table_A.column_2, table_B.column_2
+    FROM table_A
+    RIGHT OUTER JOIN table_B
+    ON table_A.column_3 = table_B.column_1
+
+=====================================================================================================================================
+
+Full Join
+_____________________________________________________________________________________________________________________________________
+- Từ khóa FULL OUTER JOIN được sử dụng để nối các hàng từ bảng bên trái (table_A), với các hàng so khớp với bảng bên phải (table_B).
+- Từ khóa FULL OUTER JOIN kết hợp kết quả của cả LEFT JOIN và RIGHT JOIN.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    SELECT table_A.column_1, table_A.column_2, table_B.column_2
+    FROM table_A
+    FULL OUTER JOIN table_B
+    ON table_A.column_3 = table_B.column_1
+
+=====================================================================================================================================
+
+Union
+_____________________________________________________________________________________________________________________________________
+- Các toán tử ONION được sử dụng để kết hợp các két quả của hai hoặc nhiều câu SELECT.
+- Chú ý rằng mỗi lệnh SELECT trong UNION phải có cùng số cột. Các cột cũng phải có kiểu dữ liệu tượng tự.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    SELECT column_name, column_name FROM table_A
+    UNION
+    SELECT column_name, column_name FROM table_B;
+
+=====================================================================================================================================
+
+Select Into
+_____________________________________________________________________________________________________________________________________
+- Câu lệnh SELECT INTO chọn dữ liệu từ một bảng và chèn nó vào một bảng mới.
+- Có thể sử dụng để sao chép thông tin từ một bảng vào một bảng khác.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+
