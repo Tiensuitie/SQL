@@ -40,3 +40,20 @@ KIỂU DỮ LIỆU TRONG SQL SERVER
                             sẽ giữ 8 byte. Giá trị mặc định của n là 53.
         real                - Dữ liệu số dấu chấm động từ -3.40E + 38 đến 3.40E + 38.
 
+    KIỂU DỮ LIỆU:
+        datetime            - Từ ngày 1 tháng 1, 1753 đến 31 tháng 12, 9999 với độ chính xác 3.33 mili giây.
+        datetime2           - Từ ngày 1 tháng 1, 0001 đến 31 tháng 12, 9999 với độ chính xác 100 nano giây.
+        smalldatetime       - Từ ngày 1 tháng 1, 1900 đến 6 tháng 6, 2079 với độ chính xác 1 phút.
+        date                - Chỉ lưu trữ dạng ngày. Từ ngày 1 tháng 1, 0001 đến 31 tháng 12, 9999.
+        time                - Chỉ lưu trữ thời gian với độ chính xác 100 nano giây.
+        datetimeoffset      - Giống như datetime2 với việc bổ sung thêm một múi giờ bù đắp.
+        timestamp           - Lưu trữ một số duy nhất được cập nhật mỗi lần được tạo ra hoặc sửa đổi. Các giá trị timestamp được dựa
+                            trên một đồng hồ nội bộ và không tương ứng với thời gian thực. Mỗi bảng có thể chỉ có một timestamp.
+
+    KIỂU DỮ LIỆU KHÁC:
+        sql_variant         - Lưu trữ đến 8,000 byte dữ liệu của các kiểu dữ liệu khác nhau khác nhau, ngoại trừ text, ntext, và
+                            timestamp.
+        uniqueidentifier    - Lưu trữ một định danh duy nhất trên toàn cầu.
+        xml                 - Lưu trữ dữ liệu định dạng XML. Tối đa 2GB.
+        cursor              - Lưu trữ một tham chiếu đến một con trỏ được sử dụng cho các hoạt động cơ sở dữ liệu.
+        table               - Lưu trữ một bộ kết quả để xử lý sau.
