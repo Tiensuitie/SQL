@@ -261,7 +261,8 @@ Joins {{chưa hoàn thành}}
 _____________________________________________________________________________________________________________________________________
 - Được sử dụng để kết hợp các hàng từ hai hoặc nhiều bảng.
 - So khớp các giá trị của cột table_A.column_2 với cột table_B.column_1 sau đó trả về giá trị trong cột table_B.column_2 tương ứng
-  với cột table_B.column_1 đang so khớp. Nếu không có giá trị nào của table_A.column_2 được tìm thấy trong table_B.column_1, 
+  với cột table_B.column_1 đang so khớp. Nếu không có giá trị nào của table_A.column_2 được tìm thấy trong table_B.column_1, bản ghi
+  đó sẽ không được trả về.
 _____________________________________________________________________________________________________________________________________
 CÚ PHÁP
     SELECT table_A.column_1, table_B.column_2, table_A.column_3
