@@ -1,7 +1,7 @@
 
 KIỂU DỮ LIỆU TRONG SQL SERVER
 
-    Kiểu Chuỗi:
+    KIỂU CHUỖI:
         char(n)             - Chuỗi ký tự có độ dài cố định. Tối đa 8,000 ký tự.
         varchar(n)          - Chuỗi ký tự có độ dài bất định. Tối đa 8,000 ký tự.
         varchar(max)        - Chuỗi ký tự có độ dài bất định. Tối đa 1,073,741,824 ký tự.
@@ -16,7 +16,7 @@ KIỂU DỮ LIỆU TRONG SQL SERVER
         varbinary(max)      - Chuỗi nhị phân có độ dài bất định. Tối đa 2GB.
         image               - Chuỗi nhị phân có độ dài bất định. Tối đa 2GB.
 
-    Kiểu Số:
+    KIỂU SỐ:
         tinyint             - Cho phép tất cả các số từ 0 đến 255.
         smallint            - Cho phép tất cả các số giữa -32,768 và 32,767.
         int                 - Cho phép tất cả các số giữa -2,147,483,648 và 2,147,483,647.
