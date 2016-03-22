@@ -210,7 +210,7 @@ Wildcards
 _____________________________________________________________________________________________________________________________________
 - Một ký tự đại diện có thể được sử dụng để thay thế cho bất kỳ các ký tự khác trong một chuỗi.
 - Ký tự đại diện được sử dụng với các toán tử LIKE.
-- Các ký tự đại diện SQL được dùng để tìm kiếm dữ liệu trong một bảng.
+- Các ký tự đại diện được dùng để tìm kiếm dữ liệu trong một bảng.
 - Các ký tự đại diện là:
     %               Thay thế cho không hoặc nhiều ký tự.
     _               Thay thế cho một ký tự đơn.
