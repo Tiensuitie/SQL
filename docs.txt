@@ -1,6 +1,6 @@
 
 KIỂU DỮ LIỆU TRONG SQL SERVER
-
+_____________________________________________________________________________________________________________________________________
     KIỂU CHUỖI:
         char(n)             - Chuỗi ký tự có độ dài cố định. Tối đa 8,000 ký tự.
         varchar(n)          - Chuỗi ký tự có độ dài bất định. Tối đa 8,000 ký tự.
@@ -15,7 +15,7 @@ KIỂU DỮ LIỆU TRONG SQL SERVER
         varbinary           - Chuỗi nhị phân có độ dài bất định. Tối đa 8,000 byte.
         varbinary(max)      - Chuỗi nhị phân có độ dài bất định. Tối đa 2GB.
         image               - Chuỗi nhị phân có độ dài bất định. Tối đa 2GB.
-
+_____________________________________________________________________________________________________________________________________
     KIỂU SỐ:
         tinyint             - Cho phép tất cả các số từ 0 đến 255.
         smallint            - Cho phép tất cả các số giữa -32,768 và 32,767.
@@ -23,23 +23,23 @@ KIỂU DỮ LIỆU TRONG SQL SERVER
         bigint              - Cho phép tất cả các số giữa -9,223,372,036,854,775,808 và 9,223,372,036,854,775,807.
         decimal(p,s)        - Độ lớn và độ chính xác của số.
                               Cho phép các số từ -10^38 +1 đến 10^38 -1.
-                              Tham số p chỉ ra tổng số lượng tối đa các chữ số có thể được lưu trữ (cả bên trái và bên phải dấu thập
-                            phân). p phải là một giá trị từ 1 đến 38. Mặc định là 18.
-                              Tham số s chỉ ra số lượng tối đa các chữ số được lưu trữ bên phải dấu thập phân. p phải là một giá trị
-                            từ 0 đến p. Mặc định là 0.
+                            - Tham số p chỉ ra tổng số lượng tối đa các chữ số có thể được lưu trữ (cả bên trái và bên phải dấu thập
+                              phân). p phải là một giá trị từ 1 đến 38. Mặc định là 18.
+                            - Tham số s chỉ ra số lượng tối đa các chữ số được lưu trữ bên phải dấu thập phân. p phải là một giá trị
+                              từ 0 đến p. Mặc định là 0.
         numeric(p,s)        - Độ lớn và độ chính xác của số.
-                              Cho phép các số từ -10^38 +1 đến 10^38 -1.
-                              Tham số p chỉ ra tổng số lượng tối đa các chữ số có thể được lưu trữ (cả bên trái và bên phải dấu thập
-                            phân). p phải là một giá trị từ 1 đến 38. Mặc định là 18.
-                              Tham số s chỉ ra số lượng tối đa các chữ số được lưu trữ bên phải dấu thập phân. p phải là một giá trị
-                            từ 0 đến p. Mặc định là 0.
+                            - Cho phép các số từ -10^38 +1 đến 10^38 -1.
+                            - Tham số p chỉ ra tổng số lượng tối đa các chữ số có thể được lưu trữ (cả bên trái và bên phải dấu thập
+                              phân). p phải là một giá trị từ 1 đến 38. Mặc định là 18.
+                            - Tham số s chỉ ra số lượng tối đa các chữ số được lưu trữ bên phải dấu thập phân. p phải là một giá trị
+                              từ 0 đến p. Mặc định là 0.
         smallmoney          - Dữ liệu tiền tệ từ -214,748.3648 đến 214,748.3647.
         money               - Dữ liệu tiền tệ từ -922,337,203,685,477.5808 đến 922,337,203,685,477.5807.
         float(n)            - Dữ liệu số dấu chấm động từ -1.79E + 308 đến 1.79E + 308.
-                              Tham số n cho biết xem các giá trị cần giữ 4 hay 8 byte để lưu trữ. float(24) sẽ giữ 4 byte, float(53)
-                            sẽ giữ 8 byte. Giá trị mặc định của n là 53.
+                            - Tham số n cho biết xem các giá trị cần giữ 4 hay 8 byte để lưu trữ. float(24) sẽ giữ 4 byte, float(53)
+                              sẽ giữ 8 byte. Giá trị mặc định của n là 53.
         real                - Dữ liệu số dấu chấm động từ -3.40E + 38 đến 3.40E + 38.
-
+_____________________________________________________________________________________________________________________________________
     KIỂU DỮ LIỆU:
         datetime            - Từ ngày 1 tháng 1, 1753 đến 31 tháng 12, 9999 với độ chính xác 3.33 mili giây.
         datetime2           - Từ ngày 1 tháng 1, 0001 đến 31 tháng 12, 9999 với độ chính xác 100 nano giây.
@@ -48,12 +48,100 @@ KIỂU DỮ LIỆU TRONG SQL SERVER
         time                - Chỉ lưu trữ thời gian với độ chính xác 100 nano giây.
         datetimeoffset      - Giống như datetime2 với việc bổ sung thêm một múi giờ bù đắp.
         timestamp           - Lưu trữ một số duy nhất được cập nhật mỗi lần được tạo ra hoặc sửa đổi. Các giá trị timestamp được dựa
-                            trên một đồng hồ nội bộ và không tương ứng với thời gian thực. Mỗi bảng có thể chỉ có một timestamp.
-
+                              trên một đồng hồ nội bộ và không tương ứng với thời gian thực. Mỗi bảng có thể chỉ có một timestamp.
+_____________________________________________________________________________________________________________________________________
     KIỂU DỮ LIỆU KHÁC:
         sql_variant         - Lưu trữ đến 8,000 byte dữ liệu của các kiểu dữ liệu khác nhau khác nhau, ngoại trừ text, ntext, và
-                            timestamp.
+                              timestamp.
         uniqueidentifier    - Lưu trữ một định danh duy nhất trên toàn cầu.
         xml                 - Lưu trữ dữ liệu định dạng XML. Tối đa 2GB.
         cursor              - Lưu trữ một tham chiếu đến một con trỏ được sử dụng cho các hoạt động cơ sở dữ liệu.
-        table               - Lưu trữ một bộ kết quả để xử lý sau.
+        table               - Lưu trữ một tập kết quả để xử lý sau.
+
+=====================================================================================================================================
+
+SQL Select
+_____________________________________________________________________________________________________________________________________
+- Câu lệnh SELECT được dùng để lựa chọn dữ liệu từ CSDL.
+- Kết quả được lưu trữ trong một bảng kết quả, gọi là tập kết quả.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    SELECT column_name, column name
+    FROM table_name;
+và
+    SELECT * FROM table_name;
+
+=====================================================================================================================================
+
+SQL Distinct
+_____________________________________________________________________________________________________________________________________
+- Câu lệnh SELECT DISTINCT sử dụng để trả về các giá trị khác biệt (khác nhau).
+- Trong một bảng, một cột có thể chứa nhiều giá trị trùng lặp; và đôi khi bạn chỉ muốn liệt kê các giá trị khác nhau (khác biệt).
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    SELECT DISTINCT column_name, column_name
+    FROM table_name;
+
+=====================================================================================================================================
+
+SQL Where
+_____________________________________________________________________________________________________________________________________
+- Mệnh đề Where được dùng để lọc các bản ghi.
+- Mệnh đề Where trích xuất chỉ các bản ghi đáp ứng thỏa mãn một tiêu chuẩn quy định.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    SELECT column_name, column_name
+    FROM table_name
+    WHERE column_name operator value;
+
+=====================================================================================================================================
+
+SQL And & Or
+_____________________________________________________________________________________________________________________________________
+- Các toán tử AND & OR được dùng để lọc các bản ghi dựa trên nhiều hơn một điều kiện.
+- Toán tử AND sẽ hiển thị một bản ghi nếu cả hai điều kiện đầu tiên và điều kiện thứ hai là đúng.
+- Toán tử OR sẽ hiển thị một bản ghi nếu một trong hai điều kiện đầu tiên hoặc thứ hai là đúng.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    SELECT column_name, column_name
+    FROM table_name
+    WHERE column_name operator value AND column_name operator value;
+và
+    SELECT column_name, column_name
+    FROM table_name
+    WHERE column_name operator value OR column_name operator value;
+
+=====================================================================================================================================
+
+SQL Order By
+_____________________________________________________________________________________________________________________________________
+- Từ khóa ORDER BY được dùng để sắp xếp các kết quả theo quy định thiết lập bởi một hoặc nhiều cột.
+- Các từ khóa ORDER BY mặc định sắp xếp các bản ghi theo thứ tự tăng dần. Để sắp xếp các bản ghi theo thứ tự giảm dần, sử dụng từ
+  khóa DESC.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    SELECT column_name, column_name
+    FROM table_name
+    ORDER BY column_name ASC|DESC, column_name ASC|DESC;
+
+=====================================================================================================================================
+
+SQL Insert Into
+_____________________________________________________________________________________________________________________________________
+- Câu lệnh INSERT INTO được dùng để chèn các bản ghi mới vào một bảng.
+- Có thể viết INSERT INTO theo hai dạng.
+- Dạng thứ nhất không xác định các cột dữ liệu sẽ đưa vào, chỉ có các giá trị.
+- Dạng thứ hai chỉ rõ cả tên cột và các giá trị được chèn vào.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    INSERT INTO table_name
+    VALUES (value1, value2, value3, ...);
+hoặc
+    INSERT INTO table_name (column1, column2, column3, ...)
+    VALUES (value1, value2, value3, ...);
+
+=====================================================================================================================================
+
+SQL Update
+_____________________________________________________________________________________________________________________________________
+- 
