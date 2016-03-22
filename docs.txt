@@ -1,0 +1,15 @@
+KIỂU DỮ LIỆU TRONG SQL SERVER
+    Kiểu Chuỗi:
+        char(n)             Chuỗi ký tự có độ dài cố định. Tối đa 8,000 ký tự.
+        varchar(n)          Chuỗi ký tự có độ dài bất định. Tối đa 8,000 ký tự.
+        varchar(max)        Chuỗi ký tự có độ dài bất định. Tối đa 1,073,741,824 ký tự.
+        text                Chuỗi ký tự có độ dài bất định. Tối đa 2GB dữ liệu văn bản.
+        nchar               Chuỗi Unicode với độ dài cố định. Tối đa 4,000 ký tự.
+        nvarchar            Chuỗi Unicode với độ dài bất định. Tối đa 4,000 ký tự.
+        nvarchar(max)       Chuỗi Unicode với độ dài bất định. Tối đa 536,870,912 ký tự.
+        ntext               Chuỗi Unicode với độ dài bất định. Tối đa 2GB dữ liệu văn bản.
+        bit                 Chỉ cho phép giá trị 0, 1 hoặc NULL.
+        binary(n)           Chuỗi nhị phân có độ dài cố định. Tối đa 8,000 byte.
+        varbinary           Chuỗi nhị phân có độ dài bất định. Tối đa 8,000 byte.
+        varbinary(max)      Chuỗi nhị phân có độ dài bất định. Tối đa 2GB.
+        image               Chuỗi nhị phân có độ dài bất định. Tối đa 2GB.
