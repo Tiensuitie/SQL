@@ -211,7 +211,7 @@ ________________________________________________________________________________
 - Một ký tự đại diện có thể được sử dụng để thay thế cho bất kỳ các ký tự khác trong một chuỗi.
 - Ký tự đại diện được sử dụng với các toán tử LIKE.
 - Các ký tự đại diện được dùng để tìm kiếm dữ liệu trong một bảng.
-- Các ký tự đại diện là:
+- Các ký tự đại diện gồm:
     %               Thay thế cho không hoặc nhiều ký tự.
     _               Thay thế cho một ký tự đơn.
     [charlist]      Thiết đặt phạm vi các ký tự phù hợp nằm trong dấu ngoặc.
@@ -220,3 +220,51 @@ ________________________________________________________________________________
 
 =====================================================================================================================================
 
+In
+_____________________________________________________________________________________________________________________________________
+- Các toán tử IN cho phép bạn chỉ định nhiều giá trị trong một mệnh đề WHERE.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    SELECT column_name, column_name
+    FROM table_name
+    WHERE column_name IN (value1, value2, ...);
+
+=====================================================================================================================================
+
+Between
+_____________________________________________________________________________________________________________________________________
+- Các toán tử BETWEEN được sử dụng để chọn các giá trị trong một phạm vi. Các giá trị có thể là số, văn bản, hoặc ngày.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    SELECT column_name, column_name
+    FROM table_name
+    WHERE column_name BETWEEN value1 AND value2;
+
+=====================================================================================================================================
+
+Aliases
+_____________________________________________________________________________________________________________________________________
+- ALIAS được sử dụng để tạm thời đổi tên một bảng hoặc một tiêu đề cột, gọi là bí danh.
+- Về cơ bản bí danh được tạo ra để làm cho tên cột dễ đọc hơn.
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+- Bí danh cho cột:
+    SELECT column_name AS alias_name, column_name AS alias_name
+    FROM table_name
+- Bí danh cho bảng:
+    SELECT column_name, column_name
+    FROM table_name AS alias_name
+
+=====================================================================================================================================
+
+Joins {{chưa hoàn thành}}
+_____________________________________________________________________________________________________________________________________
+- Được sử dụng để kết hợp các hàng từ hai hoặc nhiều bảng.
+- So khớp các giá trị của cột table_A.column_2 với cột table_B.column_1 sau đó trả về giá trị trong cột table_B.column_2 tương ứng
+  với cột table_B.column_1 đang so khớp. Nếu không có giá trị nào của table_A.column_2 được tìm thấy trong table_B.column_1, 
+_____________________________________________________________________________________________________________________________________
+CÚ PHÁP
+    SELECT table_A.column_1, table_B.column_2, table_A.column_3
+    FROM table_A
+    JOIN table_B
+    ON table_A.column_2=table_B.column_1
