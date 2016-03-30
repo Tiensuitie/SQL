@@ -344,7 +344,7 @@ CÚ PHÁP
 
 Union
 _____________________________________________________________________________________________________________________________________
-- Các toán tử ONION được sử dụng để kết hợp các két quả của hai hoặc nhiều câu SELECT.
+- Các toán tử ONION được sử dụng để kết hợp các kết quả của hai hoặc nhiều câu SELECT.
 - Chú ý rằng mỗi lệnh SELECT trong UNION phải có cùng số cột. Các cột cũng phải có kiểu dữ liệu tượng tự.
 _____________________________________________________________________________________________________________________________________
 CÚ PHÁP
